@@ -28,9 +28,9 @@ public class ArraysandMethods{
 			sum = sum + newArray.length;
 		}
 		if (sum >= 99) {
-			return true;
-		}else {
 			return false;
+		}else {
+			return true;
 		}
 	}
 	//10
@@ -38,10 +38,21 @@ public class ArraysandMethods{
 		return (a + b + c + d) / 4;
 	}
 	//11
-//	public static boolean compareArrays(double myArray[], double myArray2[], numbers) {
-//		double sum = 0;
-//		
-//		}
+	public static boolean compareArrays(double myArray1[], double myArray2[]) {
+		double sum = 0.0;
+		double sum1 = 0.0;
+		for(int i = 0;i < myArray1.length;i++) {
+			sum += myArray1[i];
+		}
+		for(int i = 0;i < myArray2.length;i++) {
+			sum1 += myArray2[i];
+		}
+		if(sum1 > sum) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 	//12
 	public static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
 		if(isHotOutside == true && moneyInPocket > 10.50) {
@@ -116,7 +127,7 @@ public class ArraysandMethods{
 			temp = names[i].length() + temp;
 		}
 		System.out.println(temp / names.length);
-		
+//		
 		//b.	Use a loop to iterate through the array again and 
 		//		concatenate all the names together, separated by spaces, and print the result to the console.
 		
@@ -192,7 +203,7 @@ public class ArraysandMethods{
 		doubleArray2[5] = 0.10;
 		doubleArray2[6] = 1.25;
 		
-		
+		System.out.println(compareArrays(doubleArray, doubleArray2));
 		
 		//12.	Write a method called willBuyDrink that takes a boolean isHotOutside, and a double 
 		//		moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
